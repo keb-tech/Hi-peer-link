@@ -13,7 +13,7 @@ const peers = {}
 navigator.mediaDevices.getUserMedia({
   video: true,
   audio: true
-}).then(stream => {
+}).then(stream =>{
   myVideoStream = stream;
   addVideoStream(myVideo, stream)
   myPeer.on('call', call => {
@@ -27,7 +27,7 @@ navigator.mediaDevices.getUserMedia({
   socket.on('user-connected', userId => {
     connectToNewUser(userId, stream)
   })
-  
+
   // input value
   let text = $("input");
   // when press enter send message
