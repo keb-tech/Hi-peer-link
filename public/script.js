@@ -1,10 +1,17 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-const myPeer = new Peer(undefined, {
-  path: '/peerjs',
-  host: '/',
-  port: '443'
-})
+// const myPeer = new Peer(undefined, {
+//   path: '/peerjs',
+//   host: '/',
+//   port: '443'
+// })
+
+const peer = new Peer({
+  config: {'iceServers': [
+    { url: 'stun:stun.l.google.com:19302' },
+    { url: 'turn:numb.viagenie.ca' }
+  ]}
+});
 
 let myVideoStream;
 const myVideo = document.createElement('video')
