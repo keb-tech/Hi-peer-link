@@ -8,8 +8,8 @@ const videoGrid = document.getElementById('video-grid')
 
 const myPeer = new Peer({
   config: {'iceServers': [
-    { url: 'stun:turn01.brie.fi:5349' },
-    { url: 'turn:turn01.brie.fi:5349', credential: 'fi', username: 'brie' }
+    { url: 'stun:global.stun.twilio.com:3478?transport=udp' },
+    { url: 'numb.viagenie.ca', credential: 'test101', username: 'kael.gtx@gmail.com' }
   ]}
 });
 
